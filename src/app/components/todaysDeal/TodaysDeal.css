@@ -1,0 +1,11 @@
+.TodaysDeals{
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+.TodaysDeals-div{
+    margin: 3px;
+    /* background-color: lightgray; */
+}
+.off-text{
+    background-color: red;
+}

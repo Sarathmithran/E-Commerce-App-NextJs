@@ -1,0 +1,13 @@
+.navbar-container{
+    background-color: rgb(41, 41, 65);
+}
+.search-box{
+    width: 700px;
+}
+.nav-menu{
+    color: orange !important;
+}
+/* .nav-menu:hover{
+    color: white;
+    stroke: white;
+} */

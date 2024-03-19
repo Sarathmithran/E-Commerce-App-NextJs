@@ -1,0 +1,16 @@
+.prodDetail-container{
+    box-shadow: 0px 0px 80px -20px #DCDCDC;
+    padding: 20px;
+    border-radius: 10px;
+}
+.delivery{
+    font-size: small;
+    font-weight: 600;
+}
+.delivery img{
+    width: 50px;
+}
+.cod{
+    font-size: small;
+    font-weight: 600;
+}

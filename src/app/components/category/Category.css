@@ -1,0 +1,48 @@
+.category{
+    border: 1px solid lightgray;
+    background-color: rgb(50, 50, 74);
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 1px 1px 5px 0px lightgray;
+}
+.Electronics{
+    display: flex;
+    justify-content: center;
+}
+.Electronics img:hover{
+   border: 2px solid white;
+}
+.Fashion{
+    display: flex;
+    justify-content: center;
+}
+.Furniture{
+    display: flex;
+    justify-content: center;
+}
+.kitchen{
+    display: flex;
+    justify-content: center;
+}
+.category-prod-div{
+    width: 300px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+}
+.category-prod-des{
+    font-size: smaller;
+    font-weight: 100;
+}
+.Electronics span{
+    text-align: center;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+}
+.Electronics img{
+    box-shadow: 0px 0px 1px 3px  lightgray;
+}
+.category-name{
+    color: red;
+}

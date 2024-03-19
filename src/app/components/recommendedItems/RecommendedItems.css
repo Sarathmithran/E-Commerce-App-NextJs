@@ -1,0 +1,14 @@
+.recommendedItems{
+    overflow-y: auto;
+}
+.RI-div{
+    padding: 8px;
+    border:1px solid rgb(187, 185, 185);
+    width:200;
+}
+.RI-div span{
+    text-align: center;
+}
+.recommended-price{
+    font-size: smaller;
+}
