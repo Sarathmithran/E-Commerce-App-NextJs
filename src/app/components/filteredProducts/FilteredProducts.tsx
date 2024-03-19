@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 export default function ProductFilter(props: any) {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
-  const [categories, setCategories] = useState<CategoryDataType[]>([]);
+  const [categories, setCategories] = useState<any>([]);
 
   function handleCategoryChange(category: string): void {
     setSelectedCategory(category);
@@ -45,7 +45,7 @@ export default function ProductFilter(props: any) {
             {"All"}
           </label>
         </label>
-        {categories.map((c) => (
+        {categories.map((c:any) => (
           <label
             key={c.slug}
             className="btn text-start text-decoration-none border-white"

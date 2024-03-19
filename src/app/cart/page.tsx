@@ -27,7 +27,7 @@ const Cart = () => {
   //store cart products
   const [cartProducts ,setCartProducts] = useState([]);
   const [loading,setLoading] = useState(true);  
-  const [fetchCartProducts ,setFetchCartProducts] = useState([]);
+  const [fetchCartProducts, setFetchCartProducts] = useState<any>();
 
   //fetching cart products
   useEffect(()=>{
@@ -65,7 +65,7 @@ for(let i of fetchCartProducts){
                         <span className='fs-5 fw-normal opacity-50'>cart is empty</span>
                       </div>
                   ):
-                  fetchCartProducts?.map((c) =>{
+                  fetchCartProducts?.map((c:any) =>{
                       return (
                           <>
                               <div>
@@ -79,7 +79,7 @@ for(let i of fetchCartProducts){
                                           <img src={c.image.url}height={60}/>
                                       </div>
                                       <div  className='col-5'>
-                                          <h6 className='pt-3 ps-2'>{c.name}</h6>
+                                          <h6 className='pt-3 ps-2'>&{c.name}</h6>
                                       </div>
                                       <div className='col pt-3 fw-semibold'>
                                           Quantity - {c.quantity}
