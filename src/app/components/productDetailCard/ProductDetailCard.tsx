@@ -6,11 +6,17 @@ import RupeesIcon from '@/SVG/rupeesIcon';
 import AddToCart from '../addToCart/AddToCart';
 import Rating from '@/SVG/rating';
 import BackBtn from '../backBtn/BackBtn';
+import DownArrow from '@/SVG/downArrow';
 
 
 const ProductDetailCard = async (props:any) => {
 
     const product = await ProductServices.getProductById(props.productId);
+
+    // Generate random rating between 1 and 5
+    const rating = (Math.random() * (5 - 1) + 1).toFixed(1);
+    // Generate random number of reviews
+    const reviews = Math.floor(Math.random() * 1000) + 1;
 
     //removing tags from product description
     function removeTags(input: string) {
@@ -37,7 +43,7 @@ const ProductDetailCard = async (props:any) => {
                         <span className='text-danger fs-5 text-uppercase fw-bold'>{product.categories[0]?.name}</span>
                     </div>
                     <div>
-                        <Rating/>
+                        <Rating/><span className='ps-2 fw-semibold'>{rating} ({reviews})</span><DownArrow/>
                     </div>
                     <div>
                         <span className='text-secondary'>{productDescription}</span>

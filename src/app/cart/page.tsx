@@ -79,7 +79,7 @@ for(let i of fetchCartProducts){
                                           <img src={c.image.url}height={60}/>
                                       </div>
                                       <div  className='col-5'>
-                                          <h6 className='pt-3 ps-2'>&{c.name}</h6>
+                                          <h6 className='pt-3 ps-2'>{c.name}</h6>
                                       </div>
                                       <div className='col pt-3 fw-semibold'>
                                           Quantity - {c.quantity}
