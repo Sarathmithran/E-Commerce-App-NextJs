@@ -6,9 +6,13 @@ import Link from 'next/link'
 import CartLogo from '@/SVG/cart'
 import { usePathname } from 'next/navigation'
 import Search from './Search'
+import { useCart } from '../../services/cartContext';
 
 const Header = () => {
 
+  const { cartItems } = useCart();
+  console.log('cartitems',cartItems);
+  
   const pathname = usePathname();
 
   return (
@@ -38,7 +42,13 @@ const Header = () => {
                         </li>
                         <li className="nav-item">
                         <Link className={`link ${pathname === '/cart' ? 'nav-link active' : 'nav-link nav-menu'}`} href="/cart">
-                            <CartLogo/>
+                            <CartLogo/>{
+                                    //number of items in cart
+                                    cartItems.length >=1 && (
+                                        <span className="bg-danger rounded-circle mt-5 cart-notification">
+                                            {cartItems.length}
+                                        </span>
+                                    )}
                         </Link>
                         </li>
                     </ul>

@@ -23,7 +23,7 @@ export default function ProductFilter(props: any) {
   }, []);
 
   return (
-    <div className="pt-4 mt-2 ms-3">
+    <div className="pt-4 mt-2 ms-1">
       <form className="d-flex flex-column">
         <span className="fs-5 fw-bold  ps-3">Category:</span>
         <label

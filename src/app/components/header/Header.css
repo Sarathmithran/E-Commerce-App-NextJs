@@ -4,10 +4,33 @@
 .search-box{
     width: 700px;
 }
+@media screen and (max-width: 1493px) {
+    .search-box {
+      width: 500px
+    }
+    @media (max-width: 1387px) {
+        .search-box {
+          width: 350px;
+        }
+    }
+    @media (max-width: 1142px) {
+        .search-box {
+          width: 195px;
+        }
+      }
+  }
 .nav-menu{
     color: orange !important;
 }
-/* .nav-menu:hover{
-    color: white;
-    stroke: white;
-} */
+.navbar-nav .nav-item .active{
+    color: white !important;
+    stroke:white !important;
+}
+.cart-notification{
+    color:white;
+    font-size:small;
+    padding:0px 4px 0px 4px;
+    position: relative;
+    top: -12px;
+    right: 6px;
+}

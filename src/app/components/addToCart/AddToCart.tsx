@@ -2,15 +2,18 @@
 
 import { ProductServices } from '@/app/services/product-services';
 import React, { useState } from 'react'
+import {useCart} from '../../services/cartContext'
 
 const AddToCart = (props:any) => {
 
+    const { setCartItems } = useCart();
     const [addMessage,setAddMessage] = useState(false);
 
     const addTocart = async (prodId:any) => {
         try {
             const response = await ProductServices.addToCart(prodId);
             const data = await response.json();
+            setCartItems(data.line_items);
             setAddMessage(true);    
         } catch (error) {
             console.error('An error occurred:', error);

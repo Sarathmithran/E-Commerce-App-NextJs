@@ -4,17 +4,21 @@ import { ProductServices } from '../services/product-services';
 import CartLoading from '@/SVG/cartLoading';
 import OtherAdds from '../components/otherAdds/OtherAdds';
 import RecommendedItems from '../components/recommendedItems/RecommendedItems';
+import { useCart } from '../services/cartContext';
 
 const Cart = () => {
 
   // Remove cart item
   const [removeMessage, setRemoveMessage] = useState(false);
+  const { setCartItems } = useCart();
 
   const removeCartItem = async (prodId:string) => {
     try {
         const response = await ProductServices.removeCartItem(prodId)
         setCartProducts(response);
         setRemoveMessage(true);
+        setCartItems(response.line_items);
+        // console.log('rci',response);
     } catch (error) {
         console.error('Error removing item from the cart', error);
     } finally{
@@ -34,7 +38,9 @@ const Cart = () => {
     const fetchingCartProducts = async () => {
       try {
           const response = await ProductServices.fetchingCartProducts();
-          setFetchCartProducts(response.line_items);   
+          setFetchCartProducts(response.line_items);
+          console.log('cart products',response.line_items);
+            
       } catch (error) {
           console.error('An error occurred:', error);
       } finally{
@@ -58,7 +64,7 @@ for(let i of fetchCartProducts){
   return (
     <>
         <div style={{minHeight:390}} className='mt-3 mb-3'>
-          <h6 style={{textAlign:'center',borderBottom:'1px solid lightgray',color:'#5892b1'}} className="container fw-bold fs-3">Shopping Cart</h6>
+          <h6 style={{textAlign:'center',borderBottom:'1px solid lightgray',color:'rgb(41, 41, 65)'}} className="container fw-bold fs-3">Shopping Cart</h6>
               {
                   fetchCartProducts?.length === 0 ? (
                       <div className='d-flex justify-content-center align-items-center' style={{minHeight:'30vh'}}>

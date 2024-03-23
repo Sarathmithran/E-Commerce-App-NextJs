@@ -8,7 +8,6 @@ import Rating from '@/SVG/rating';
 import BackBtn from '../backBtn/BackBtn';
 import DownArrow from '@/SVG/downArrow';
 
-
 const ProductDetailCard = async (props:any) => {
 
     const product = await ProductServices.getProductById(props.productId);
