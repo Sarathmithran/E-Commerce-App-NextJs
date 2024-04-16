@@ -51,6 +51,24 @@ export class ProductServices {
         }
     }
 
+    static fetchCategoryData = async (cartId:string) => {
+        try {
+            const response = await fetch('https://api.chec.io/v1/categories/'+cartId,{
+                method: "GET",
+                headers: {
+                    'X-Authorization': 'pk_56071358605a875a29428978ff87f7f139cafebdd5046',
+                    Accept: "application/json",
+                            "Content-Type": "application/json",
+                }
+            });
+            const data = await response.json();
+            return data.slug;
+
+        } catch (error) {
+            console.error('An error occurred:', error);
+        }
+    };
+
     static addToCart = async (prodId:any) => {
         const response = await fetch("https://api.chec.io/v1/carts/cart_zkK6oLWDG6wXn0", {
         method: "POST",

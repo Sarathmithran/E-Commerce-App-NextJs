@@ -15,7 +15,7 @@ const ProductCard = (props:any) => {
     const reviews = Math.floor(Math.random() * 1000) + 1;
     
   return (
-    <div className='d-flex flex-wrap justify-content-center ms-5 mb-5'>
+    <div className='d-flex flex-wrap justify-content-center ms-4 mb-5'>
                     <Link href={'/products/'+product.id} style={{textDecoration:'none'}}>
                         <div className="prod-container d-flex flex-column justify-content-evenly">
                             <div className='text-center'><img src={product?.image?.url} style={{height:'190px'}}/></div>
