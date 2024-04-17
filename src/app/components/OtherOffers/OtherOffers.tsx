@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 const OtherOffers = () => {
@@ -9,22 +10,22 @@ const OtherOffers = () => {
                 </div>
                 <div className="row gap-3 pt-2">
                     <div className="col">
-                        <img src={'/otherimg1.jpg'}/>
+                        <Image alt='img' height={190} width={210} src={'/otherimg1.jpg'}/>
                     </div>
                     <div className="col">
-                        <img src={'/otherimg2.jpg'}/>
+                        <Image alt='img' height={190} width={210} src={'/otherimg2.jpg'}/>
                     </div>
                     <div className="col">
-                        <img src={'/offerimg3.jpg'}/>
+                        <Image alt='img' height={190} width={210} src={'/offerimg3.jpg'}/>
                     </div>
                     <div className="col">
-                        <img src={'/offerimg4.jpg'}/>
+                        <Image alt='img' height={190} width={210} src={'/offerimg4.jpg'}/>
                     </div>
                     <div className="col">
-                        <img src={'/offerimg5.jpg'}/>
+                        <Image alt='img' height={190} width={210} src={'/offerimg5.jpg'}/>
                     </div>
                     <div className="col">
-                        <img src={'/offerimg6.jpg'}/>
+                        <Image alt='img' height={190} width={210} src={'/offerimg6.jpg'}/>
                     </div>
                 </div>
             </div>   

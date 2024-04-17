@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import './OfferSection.css';
 
 const OfferSection = () => {
@@ -9,17 +10,17 @@ const OfferSection = () => {
                     <h5 className='fw-bold'>Starting ₹199 | Combo offers</h5>
                 </div>
                 <div>
-                    <img src={'/Combo.jpg'}/>
+                    <Image alt='img' width={400} height={300} src={'/Combo.jpg'} layout="responsive"/>
                 </div>
                 <div><span className='text-secondary'>see all offers</span></div>
             </div>
 
             <div className='offer-div col'>
                 <div>
-                    <h5 className='fw-bold'>Up to 50% off | International brands</h5>
+                    <h5 className='fw-bold'>Up to 50% off | brands</h5>
                 </div>
                 <div>
-                    <img src={'/imgfull.jpg'}/>
+                    <Image alt='img' width={400} height={300} src={'/imgfull.jpg'} layout="responsive"/>
                 </div>
                 <div><span className='text-secondary'>see all offers</span></div>
             </div>
@@ -29,7 +30,7 @@ const OfferSection = () => {
                     <h5 className='fw-bold'>Starting ₹99 | Indoor plants</h5>
                 </div>
                 <div>
-                    <img src={'/imgfull2.jpg'}/>
+                    <Image alt='img' width={400} height={300} src={'/imgfull2.jpg'} layout="responsive"/>
                 </div>
                 <div><span className='text-secondary'>see all offers</span></div>
             </div>

@@ -6,6 +6,7 @@ import ProductCard from '../productCard/ProductCard';
 import RecommendedItems from '../recommendedItems/RecommendedItems';
 import OtherAdds from '../otherAdds/OtherAdds';
 import TodaysDeal from '../todaysDeal/TodaysDeal';
+import Loading from '../loading/Loading';
 
 
 const ProductList = (props:any) => {
@@ -13,9 +14,7 @@ const ProductList = (props:any) => {
   const userInput = props.searchParams;
   const [category, setCategory] = useState<string>("");
   const [filterProducts, setFilterProducts] = useState<ProductsDataType[]>([]);
-  const [loading, setLoading] = useState(true); // Added loading state
-
-  // const products = await ProductServices.getProducts();
+  const [loading, setLoading] = useState(false); // Added loading state
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -66,7 +65,7 @@ const ProductList = (props:any) => {
               minHeight: "90vh",
             }}
           >
-            {/* Placeholder for loading state */}
+            <Loading/>
           </div>
         ) : (
           <div

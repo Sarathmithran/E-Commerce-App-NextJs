@@ -7,6 +7,7 @@ import AddToCart from '../addToCart/AddToCart';
 import Rating from '@/SVG/rating';
 import BackBtn from '../backBtn/BackBtn';
 import DownArrow from '@/SVG/downArrow';
+import Image from 'next/image';
 
 const ProductDetailCard = async (props:any) => {
 
@@ -31,7 +32,7 @@ const ProductDetailCard = async (props:any) => {
                 <BackBtn/>
                 </div>
                 <div className='col-6 d-flex gap-4'>
-                    <img src={product.image?.url} alt='product image' width={500} height={500}/>
+                    <Image src={product.image?.url} alt='product image' width={500} height={500}/>
                     <Heart/>
                 </div>
                 <div className='col-5'>

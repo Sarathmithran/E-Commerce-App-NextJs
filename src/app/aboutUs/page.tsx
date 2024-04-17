@@ -16,7 +16,7 @@ const About = () => {
             <div>
                 <div className='container d-flex flex-wrap'>
                     <div className='col'>
-                        <Image src={'/technology.png'} alt='technology' width={750} height={550}/>
+                        <Image src={'/technology.png'} alt='technology' width={750} height={550} layout='responsive'/>
                     </div>
                     <div className='col d-flex flex-column justify-content-center'>
                         <div className='pb-2 fw-bold fs-1'><span>INNOVATION</span></div>
@@ -33,7 +33,7 @@ const About = () => {
                         <div><button className='btn btn-primary fw-bold'>KNOW MORE</button></div>
                     </div>
                     <div className='col pt-1'>
-                        <Image src={'/ethics.jpg'} alt='ethics' className='rounded-3' width={750} height={400}/>
+                        <Image src={'/ethics.jpg'} alt='ethics' className='rounded-3' width={750} height={400} layout='responsive'/>
                     </div>
                 </div>   
             </div>
