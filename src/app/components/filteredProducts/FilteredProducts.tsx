@@ -28,7 +28,7 @@ export default function ProductFilter(props: any) {
         <span className="fs-5 fw-bold  ps-3">Category:</span>
         <label
           key={"all"}
-          className="btn btn-link text-start text-decoration-none pb-0"
+          className="btn btn-link text-start text-decoration-none pb-0 d-flex "
         >
           <input
             type="radio"
@@ -40,8 +40,7 @@ export default function ProductFilter(props: any) {
             id={"all"}
             autoComplete="off"
           />
-          <label className="btn btn-outline-primary" htmlFor={"All"}>
-            {" "}
+          <label className="btn btn-outline-primary mb-0" htmlFor={"all"}>
             {"All"}
           </label>
         </label>
